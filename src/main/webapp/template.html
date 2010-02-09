@@ -31,9 +31,10 @@ jQuery.fn.autoResize = function(options)
         'width' : 400,
         'height': 300
     }
+  
     var opt = $.extend(true, {},opts,options || {});
-    width = opt.width;
-    height = opt.height;
+    var width = opt.width;
+    var height = opt.height;
     $('img',this).each(function(){
         var image = new Image();
         image.src = $(this).attr('src');
@@ -54,7 +55,6 @@ jQuery.fn.autoResize = function(options)
 }
 
 </script>
-
 <div class="siteResult">
   <div class="siteImage"><a id="soso.com" name="soso.com" target="_blank" onclick="_gaq.push(['_trackPageview','/goto/www.soso.com']);" href="/goto/www.soso.com"><img class="siteSnap" src="http://www.yesnap.com/preview/http://soso.com" /></a></div>
   <div class="siteResultDescription">
@@ -66,5 +66,4 @@ jQuery.fn.autoResize = function(options)
     </div>
   </div>
 </div>
-</head>
 </html>
