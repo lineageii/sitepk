@@ -35,15 +35,13 @@ public class SiteResource {
 	@Autowired
 	SiteService siteService;
 	
-//	@Path("/{url}")
-//	@GET
-//	@Produces("application/json")
-//	@SuppressWarnings("unchecked")
-//	public SpSite[] getSitesByUrl(@PathParam("url") String url) {
-//		final Session session = sessionFactory.getCurrentSession();
-//		final Criteria criteria = session.createCriteria(SpSite.class);
-//		return (SpSite[]) criteria.list().toArray(new SpSite[]{});
-//	}
+	@Path("/{url}")
+	@GET
+	@Produces("application/json")
+	@SuppressWarnings("unchecked")
+	public SpSite[] getSitesByUrl(@PathParam("url") String url) {
+		return (SpSite[]) siteService.getSitesByUrl(url).toArray(new SpSite[]{});
+	}
 	
 	@Path("/id/{id}")
 	@GET

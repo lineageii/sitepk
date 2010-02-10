@@ -18,13 +18,14 @@ public class SiteServiceImpl implements SiteService {
 	SpSiteHome SpSiteHome;
 	
 	@Override
-	public List<Site> getSitesByUrl(String url) {
-		List<Site> sites = new ArrayList<Site>();
-		Site site = new Site();
+	public List<SpSite> getSitesByUrl(String url) {
+		List<SpSite> sites = new ArrayList<SpSite>();
+		SpSite site = new SpSite();
 		site.setName("雅虎");
 		site.setUrl("yahoo.com");
 		sites.add(site);
 		
+		site = new SpSite();
 		site.setName("百度");
 		site.setUrl("baidu.com");
 		sites.add(site);

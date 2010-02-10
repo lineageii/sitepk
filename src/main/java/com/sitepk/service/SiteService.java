@@ -2,7 +2,6 @@ package com.sitepk.service;
 
 import java.util.List;
 
-import com.sitepk.entity.Site;
 import com.sitepk.hibernate.SpSite;
 
 public interface SiteService {
@@ -11,7 +10,7 @@ public interface SiteService {
 	 * @param url google.com
 	 * @return baidu.com,yahoo.com,bing.com.etc
 	 */
-	public List<Site> getSitesByUrl(String url);
+	public List<SpSite> getSitesByUrl(String url);
 	
 	/**
 	 * get site by id
