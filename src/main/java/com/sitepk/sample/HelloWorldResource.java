@@ -6,19 +6,20 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.sitepk.entity.Person;
+import com.sitepk.entity.Site;
 import com.sun.jersey.api.client.ClientResponse.Status;
 
 @Path("/")
 public class HelloWorldResource {
+	
 	@Path("/helloworld.com")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Person getClichedMessage(){
-		Person person = new Person();
-		person.setId(1);
-		person.setName("hu jia");
-		return person;
+	public Site getClichedMessage(){
+		Site site = new Site();
+		site.setSiteid("1");
+		site.setName("aaa");
+		return site;
 	}
 	
 	@Path("/user/add")

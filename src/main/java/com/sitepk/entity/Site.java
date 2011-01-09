@@ -1,5 +1,8 @@
 package com.sitepk.entity;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Site {
     private String siteid;
     private String url;
