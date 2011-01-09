@@ -6,12 +6,14 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.stereotype.Component;
 
 /**
  * Home object for domain model class SpSite.
  * @see com.sitepk.hibernate.SpSite
  * @author Hibernate Tools
  */
+@Component
 public class SpSiteHome {
 
 	private static final Log log = LogFactory.getLog(SpSiteHome.class);

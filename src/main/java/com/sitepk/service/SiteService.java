@@ -3,6 +3,7 @@ package com.sitepk.service;
 import java.util.List;
 
 import com.sitepk.entity.Site;
+import com.sitepk.hibernate.SpSite;
 
 public interface SiteService {
 	/**
@@ -12,4 +13,10 @@ public interface SiteService {
 	 */
 	public List<Site> getSitesByUrl(String url);
 	
+	/**
+	 * get site by id
+	 * @param id
+	 * @return site
+	 */
+	public SpSite getSitesById(String id);
 }

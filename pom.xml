@@ -135,6 +135,11 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>3.6.0.Final</version>
 		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>3.6.0.Final</version>
+		</dependency>
 		
 		<!-- In Memory Database -->
 		<dependency>
@@ -194,6 +199,11 @@
 			<id>jboss-public-repository-group</id>
 			<name>JBoss Public Repository Group</name>
 			<url>http://repository.jboss.org/nexus/content/groups/public/</url>
+		</repository>
+		<repository>
+			<id>jboss-public-repository-group2</id>
+			<name>JBoss Public Repository Group</name>
+			<url>https://repository.jboss.org/nexus/content/groups/developer/</url>
 		</repository>
 	</repositories>
 	<build>
