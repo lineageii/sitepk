@@ -22,7 +22,7 @@ import com.sitepk.service.SiteService;
 
 /**
  * Site 相关类
- * 1. /site/google.com 查询和gooogle相关的网站
+ * 1. /site/google.com 查询和cackle相关的网站
  * @author hujiag@gmail.com
  *
  */
