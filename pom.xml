@@ -222,7 +222,7 @@
 				<artifactId>maven-jetty-plugin</artifactId>
 				<version>6.1.5</version>
 				<configuration>
-					<contextPath>/</contextPath>
+					<contextPath>/rest/*</contextPath>
 					<scanIntervalSeconds>10</scanIntervalSeconds>
 				</configuration>
 			</plugin>
