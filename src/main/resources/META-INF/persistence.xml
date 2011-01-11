@@ -6,7 +6,7 @@
       <properties>
          <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
          <property name="hibernate.default_schema" value="sitepk" />
-         <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+         <property name="hibernate.hbm2ddl.auto" value="update"/>
       </properties>
    </persistence-unit>
 </persistence>
