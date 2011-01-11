@@ -8,6 +8,12 @@
 	</context-param>
 	<listener>
 		<listener-class>
+			com.sitepk.core.HsqldbListener
+		</listener-class>
+	</listener>	
+	
+	<listener>
+		<listener-class>
 			org.springframework.web.context.ContextLoaderListener
 		</listener-class>
 	</listener>
