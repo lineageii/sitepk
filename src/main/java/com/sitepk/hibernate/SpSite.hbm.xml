@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2010-12-23 3:02:45 by Hibernate Tools 3.3.0.GA -->
 <hibernate-mapping>
-    <class name="com.sitepk.hibernate.SpSite" table="sp_site" catalog="sitepk">
+    <class name="com.sitepk.hibernate.SpSite" table="sp_site">
         <id name="siteid" type="string">
             <column name="SITEID" length="13" />
             <generator class="assigned" />

@@ -31,19 +31,17 @@ import com.sitepk.service.SiteService;
 public class SiteResource {
 	
 	@Autowired
-	SessionFactory sessionFactory;
-	@Autowired
 	SiteService siteService;
 	
-	@Path("/{url}")
-	@GET
-	@Produces("application/json")
-	@SuppressWarnings("unchecked")
-	public SpSite[] getSitesByUrl(@PathParam("url") String url) {
-		final Session session = sessionFactory.getCurrentSession();
-		final Criteria criteria = session.createCriteria(SpSite.class);
-		return (SpSite[]) criteria.list().toArray(new SpSite[]{});
-	}
+//	@Path("/{url}")
+//	@GET
+//	@Produces("application/json")
+//	@SuppressWarnings("unchecked")
+//	public SpSite[] getSitesByUrl(@PathParam("url") String url) {
+//		final Session session = sessionFactory.getCurrentSession();
+//		final Criteria criteria = session.createCriteria(SpSite.class);
+//		return (SpSite[]) criteria.list().toArray(new SpSite[]{});
+//	}
 	
 	@Path("/id/{id}")
 	@GET

@@ -91,6 +91,17 @@ public class HsqldbListener implements ServletContextListener {
             server.setSilent(true);
             server.start();
             Thread.sleep(WAIT_TIME);
+            
+//            try {
+//                Class.forName("org.hsqldb.jdbcDriver");
+//                Connection c = DriverManager.getConnection(url, username, password);
+//                Statement statement = c.createStatement();
+//                statement.execute("create schema " + databaseName);
+//                c.close();
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+            
         } catch (IOException ex) {
             System.out.println(
                 "HsqldbListener : contextInitialized : error : " + ex);

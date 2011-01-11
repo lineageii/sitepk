@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2010-12-23 3:02:45 by Hibernate Tools 3.3.0.GA -->
 <hibernate-mapping>
-    <class name="com.sitepk.hibernate.SpTags" table="sp_tags" catalog="sitepk">
+    <class name="com.sitepk.hibernate.SpTags" table="sp_tags" >
         <id name="tagname" type="string">
             <column name="TAGNAME" length="20" />
             <generator class="assigned" />
