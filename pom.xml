@@ -10,7 +10,7 @@
 
 	<properties>
 		<spring.version>3.0.5.RELEASE</spring.version>
-		<jersey.version>1.4</jersey.version>
+		<jersey.version>1.5</jersey.version>
 		<!-- Avoids MacRoman encoding on OSX -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
