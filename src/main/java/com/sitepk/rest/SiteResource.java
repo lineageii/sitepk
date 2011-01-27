@@ -19,6 +19,8 @@ import com.sitepk.entity.Site;
 import com.sitepk.hibernate.SpSite;
 import com.sitepk.hibernate.SpSiteHome;
 import com.sitepk.service.SiteService;
+import com.sun.jersey.api.MessageException;
+import com.sun.jersey.api.NotFoundException;
 
 /**
  * Site 相关类
@@ -48,6 +50,9 @@ public class SiteResource {
 	@Produces("application/json")
 	@SuppressWarnings("unchecked")
 	public SpSite getSiteByUrl(@PathParam("id") String id) {
+		if(null == siteService.getSitesById(id)){
+			throw new NotFoundException();
+		}
 		return siteService.getSitesById(id);
 	}
 }
