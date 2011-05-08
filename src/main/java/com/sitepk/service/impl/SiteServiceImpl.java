@@ -6,17 +6,16 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sitepk.entity.Site;
 import com.sitepk.hibernate.SpSite;
 import com.sitepk.hibernate.SpSiteHome;
 import com.sitepk.service.SiteService;
 
 @Service("siteService")
 public class SiteServiceImpl implements SiteService {
-	
+
 	@Autowired
 	SpSiteHome SpSiteHome;
-	
+
 	@Override
 	public List<SpSite> getSitesByUrl(String url) {
 		List<SpSite> sites = new ArrayList<SpSite>();
@@ -24,20 +23,33 @@ public class SiteServiceImpl implements SiteService {
 		site.setName("雅虎");
 		site.setUrl("yahoo.com");
 		sites.add(site);
-		
+
 		site = new SpSite();
 		site.setName("百度");
 		site.setUrl("baidu.com");
 		sites.add(site);
 		return sites;
 	}
-	
+
 	/**
 	 * get site by id
+	 * 
 	 * @param id
 	 * @return site
 	 */
-	public SpSite getSitesById(String id){
+	public SpSite getSitesById(String id) {
 		return SpSiteHome.findById(id);
+	}
+
+	/**
+	 * get similar sites by site url
+	 * 
+	 * @param site url
+	 * @return a List of similar site
+	 */
+	public List<SpSite> getSimilarSitesBySiteUrl(String siteUrl) {
+		String sql = "SELECT site FROM SpSite site WHERE site.url = ?1";
+		Object[] params = { siteUrl };
+		return SpSiteHome.executeQuery(sql, params);
 	}
 }

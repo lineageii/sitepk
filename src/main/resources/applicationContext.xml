@@ -69,6 +69,10 @@
                 <property name="showSql" value="true"/>  
             </bean>  
         </property>  
+    </bean> 
+    
+    <bean id="search" class="com.sitepk.action.web.SearchSimilarSiteAction" scope="prototype">
+    	 <property name="siteService" ref="siteService"/>
     </bean>  
 </beans>
 

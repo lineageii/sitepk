@@ -2,14 +2,19 @@ package com.sitepk.hibernate;
 
 // Generated 2010-12-23 3:02:46 by Hibernate Tools 3.3.0.GA
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Component;
 
 /**
  * Home object for domain model class SpSite.
+ * 
  * @see com.sitepk.hibernate.SpSite
  * @author Hibernate Tools
  */
@@ -61,6 +66,22 @@ public class SpSiteHome {
 			SpSite instance = entityManager.find(SpSite.class, id);
 			log.debug("get successful");
 			return instance;
+		} catch (RuntimeException re) {
+			log.error("get failed", re);
+			throw re;
+		}
+	}
+
+	public List<SpSite> executeQuery(String sql, Object[] params) {
+		log.debug("getting SpSite instance with query: " + sql);
+		Query q = entityManager.createQuery(sql);
+		for (int i = 0; i < params.length; i++) {
+			q.setParameter(i + 1, params[i]);
+		}
+		try {
+			List<SpSite> instances = q.getResultList();
+			log.debug("get successful");
+			return instances;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
 			throw re;

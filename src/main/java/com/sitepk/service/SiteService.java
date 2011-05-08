@@ -18,4 +18,11 @@ public interface SiteService {
 	 * @return site
 	 */
 	public SpSite getSitesById(String id);
+	
+	/**
+	 * get similar site by site url
+	 * @param siteUrl
+	 * @return List<SpSite>
+	 */
+	List<SpSite> getSimilarSitesBySiteUrl(String siteUrl);
 }

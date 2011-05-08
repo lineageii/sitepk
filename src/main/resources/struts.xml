@@ -4,10 +4,33 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-	<constant name="struts.devMode" value="true" />
+
+	<bean type="com.opensymphony.xwork2.ObjectFactory" name="spring"
+		class="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+
+	<!-- Make the Spring object factory the automatic default -->
+	<constant name="struts.objectFactory" value="spring" />
+
+	<constant name="struts.class.reloading.watchList" value="" />
+	<constant name="struts.class.reloading.acceptClasses" value="" />
+	<constant name="struts.class.reloading.reloadConfig" value="false" />
+
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="false" />
 	<package name="basicstruts2" extends="struts-default">
 		<action name="index">
 			<result>/index.jsp</result>
 		</action>
+		<action name="search" class="com.sitepk.action.web.SearchSimilarSiteAction"
+			method="execute">
+			<result name="success">/web/search.jsp</result>
+		</action>
+	</package>
+	<package name="spring-default">
+		<interceptors>
+			<interceptor name="autowiring"
+				class="com.opensymphony.xwork2.spring.interceptor.ActionAutowiringInterceptor" />
+		</interceptors>
 	</package>
 </struts>
