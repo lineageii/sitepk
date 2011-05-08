@@ -17,7 +17,17 @@
 	</properties>
 
 	<dependencies>
-
+		<!-- struts2 -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+			<version>2.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.8.0.GA</version>
+		</dependency>
 		<!-- Unit Testing -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -140,7 +150,7 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>3.6.0.Final</version>
 		</dependency>
-		
+
 		<!-- In Memory Database -->
 		<dependency>
 			<groupId>org.hsqldb</groupId>
@@ -208,7 +218,7 @@
 		</repository>
 	</repositories>
 	<build>
-		<finalName>sitepkrest</finalName>
+		<finalName>sitepk</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>

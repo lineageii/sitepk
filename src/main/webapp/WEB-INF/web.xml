@@ -6,39 +6,33 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:applicationContext.xml</param-value>
 	</context-param>
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
 	<listener>
-		<listener-class>
-			com.sitepk.core.HsqldbListener
-		</listener-class>
-	</listener>	
-	
+		<listener-class>com.sitepk.core.HsqldbListener</listener-class>
+	</listener>
+
 	<listener>
-		<listener-class>
-			org.springframework.web.context.ContextLoaderListener
-		</listener-class>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 	<listener>
 		<listener-class>
-			org.springframework.web.context.request.RequestContextListener
-		</listener-class>
+			org.springframework.web.context.request.RequestContextListener</listener-class>
 	</listener>
 	<servlet>
 		<servlet-name>JerseySpring</servlet-name>
 		<servlet-class>
-			com.sun.jersey.spi.spring.container.servlet.SpringServlet
-		</servlet-class>
+			com.sun.jersey.spi.spring.container.servlet.SpringServlet</servlet-class>
 		<init-param>
-			<param-name>
-				com.sun.jersey.spi.container.ContainerRequestFilters
-			</param-name>
+			<param-name>com.sun.jersey.spi.container.ContainerRequestFilters</param-name>
 			<param-value>
 				com.sun.jersey.api.container.filter.LoggingFilter
 			</param-value>
 		</init-param>
 		<init-param>
-			<param-name>
-				com.sun.jersey.spi.container.ContainerResponseFilters
-			</param-name>
+			<param-name>com.sun.jersey.spi.container.ContainerResponseFilters</param-name>
 			<param-value>
 				com.sun.jersey.api.container.filter.LoggingFilter
 			</param-value>
@@ -48,5 +42,9 @@
 		<servlet-name>JerseySpring</servlet-name>
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 </web-app>
 
